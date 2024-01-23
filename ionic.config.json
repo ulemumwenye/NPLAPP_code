@@ -1,0 +1,7 @@
+{
+  "name": "npl",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
