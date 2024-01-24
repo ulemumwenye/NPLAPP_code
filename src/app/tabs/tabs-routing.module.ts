@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { EpaperPage } from '../epaper/epaper.page'; // Import EpaperPage
 
 const routes: Routes = [
   {
@@ -16,8 +17,12 @@ const routes: Routes = [
         loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'web1', //  this route for the web1 page
+        loadChildren: () => import('../web1/web1.module').then(m => m.Web1PageModule)
+      },
+      {//  this route for the epaper page
+        path: 'epaper',
+        loadChildren: () => import('../epaper/epaper.module').then(m => m.EpaperPageModule)
       },
       {
         path: '',

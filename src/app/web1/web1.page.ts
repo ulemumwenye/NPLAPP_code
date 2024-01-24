@@ -1,23 +1,18 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx'; // Import InAppBrowser
+import { InAppBrowser, InAppBrowserOptions } from '@ionic-native/in-app-browser/ngx';
 
 @Component({
-  selector: 'app-tabs',
-  templateUrl: 'tabs.page.html',
-  styleUrls: ['tabs.page.scss']
+  selector: 'app-web1',
+  templateUrl: './web1.page.html',
+  styleUrls: ['./web1.page.scss'],
 })
-export class TabsPage {
+export class Web1Page {
 
-  constructor(private router: Router, private inAppBrowser: InAppBrowser) {}
+  constructor(private inAppBrowser: InAppBrowser) {}
 
-  ionTabsDidChange(tab: any) {
-    console.log('ionTabsDidChange called with tab:', tab);
-
-    if (tab.tab === 'web1') {
-      console.log('Opening InAppBrowser');
-      this.openInAppBrowser();
-    }
+  ionViewDidEnter() {
+    // This method will be called when the 'web1' page is entered
+    this.openInAppBrowser();
   }
 
   openInAppBrowser() {

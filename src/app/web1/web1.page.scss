@@ -1,0 +1,11 @@
+ion-header {
+    ion-toolbar {
+      --background: skyblue; //   the background color to sky blue
+      --ion-color-base: white; //   the text color to white or any suitable color
+    }
+    
+    ion-title {
+      color: var(--ion-color-base);
+    }
+  }
+  
