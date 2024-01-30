@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 import { EpaperPage } from '../epaper/epaper.page'; // Import EpaperPage
-
+ 
 const routes: Routes = [
   {
     path: 'tabs',
@@ -23,6 +23,10 @@ const routes: Routes = [
       {//  this route for the epaper page
         path: 'epaper',
         loadChildren: () => import('../epaper/epaper.module').then(m => m.EpaperPageModule)
+      },
+      {
+        path: 'contact-us',
+        loadChildren: () => import('../contact-us/contact-us.module').then(m => m.ContactUsPageModule)
       },
       {
         path: '',

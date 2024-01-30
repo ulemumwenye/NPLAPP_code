@@ -1,7 +1,9 @@
+<!-- tab1.page.html -->
+
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Top Updates 
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,5 +15,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <div *ngFor="let post of posts">
+    <!-- Display post title -->
+    <h2>{{ post.title.rendered }}</h2>
+
+    <!-- Display post content -->
+    <div [innerHTML]="post.content.rendered"></div>
+
+    <!-- Display post image if available -->
+    <img *ngIf="post.image" [src]="post.image" alt="Post Image" class="post-image" />
+  </div>
 </ion-content>

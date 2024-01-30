@@ -1,22 +1,45 @@
-<ion-tabs>
+<!-- tabs.page.html -->
 
-  <ion-tab-bar slot="bottom">
-    <ion-tab-button tab="tab1" href="/tabs/tab1">
-      <ion-icon aria-hidden="true" name="triangle"></ion-icon>
-      <ion-label>Contact Us</ion-label>
-    </ion-tab-button>
+<ion-header>
+  <ion-toolbar>
+    <!-- Back button for navigation to tab1 -->
+    <ion-buttons slot="start">
+      <ion-back-button [defaultHref]="'/tabs/tab1'"></ion-back-button>
+    </ion-buttons>
+    <ion-title>NPL</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-    <ion-tab-button tab="epaper" href="/tabs/epaper"> <!-- button for EpaperPage -->
-      <ion-icon aria-hidden="true" name="newspaper"></ion-icon>
-      <ion-label>Epaper</ion-label>
-    </ion-tab-button>
+<ion-content>
 
+  <ion-tabs>
 
-    <!-- tab for Web1 -->
-    <ion-tab-button tab="web1" href="/tabs/web1">
-      <ion-icon aria-hidden="true" name="globe"></ion-icon>
-      <ion-label>Website</ion-label>
-    </ion-tab-button>
-  </ion-tab-bar>
+    <ion-tab-bar slot="bottom">
 
-</ion-tabs>
+      <!-- Your existing tabs -->
+      <ion-tab-button tab="contact-us" href="/tabs/contact-us">
+        <ion-icon name="mail"></ion-icon>
+        <ion-label>Contact Us</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="epaper" href="/tabs/epaper">
+        <ion-icon name="newspaper"></ion-icon>
+        <ion-label>Epaper</ion-label>
+      </ion-tab-button>
+
+      <ion-tab-button tab="web1" href="/tabs/web1">
+        <ion-icon name="globe"></ion-icon>
+        <ion-label>Website</ion-label>
+      </ion-tab-button>
+
+      <!-- Settings tab -->
+      <ion-tab-button tab="settings" (click)="openSettings()">
+        <ion-icon name="settings"></ion-icon>
+        <ion-label>Settings</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+
+  </ion-tabs>
+
+</ion-content>

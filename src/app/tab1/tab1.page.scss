@@ -1,0 +1,27 @@
+/* tab1.page.scss */
+
+.post-image {
+    max-width: 200%; /* Adjust the maximum width as needed */
+    max-height: 100px; /* Set the maximum height as needed */
+    height: auto;    /* Maintain the aspect ratio */
+    display: block;  /* Remove any default inline styling */
+    margin: 0 auto;  /* Center the image if needed */
+  }
+  /* tab1.page.scss */
+
+ion-card {
+    margin-bottom:30px; /* Adjust the bottom margin as needed */
+  }
+  
+  ion-card-content {
+    padding: 16px; /* Adjust the padding as needed */
+  }
+  
+  ion-card-title {
+    font-size: 1.5em; /* Example: Increase the title font size */
+  }
+  
+  ion-card-subtitle {
+    font-size: 1em; /* Example: Adjust the subtitle font size */
+  }
+  

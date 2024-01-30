@@ -1,1 +1,24 @@
+/* global.scss */
 
+ion-back-button {
+  --background: transparent; /* Make the background transparent */
+}
+
+ion-toolbar {
+  ion-title {
+    text-align: center;  // Center the title
+    background-color: rgb(71, 196, 212);  // Set the background color to blue
+    color: white;  // Set the text color to white
+    padding: 10px;  // Padding for better visibility
+    display: flex;
+    align-items: center; /* Align title and back button vertically */
+  }
+
+  ion-buttons {
+    ion-back-button {
+      --background: rgb(71, 196, 212); /* Set the background color of the back button */
+      color: white; /* Set the text color of the back button to white */
+      margin-right: 8px; /* Add a margin to separate title and back button */
+    }
+  }
+}
